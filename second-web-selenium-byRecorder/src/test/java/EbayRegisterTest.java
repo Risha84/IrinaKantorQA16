@@ -14,12 +14,16 @@ public class EbayRegisterTest {
   @BeforeClass(alwaysRun = true)
   public void setUp() {
     driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+   // driver.manage().window().maximize();
   }
 
   @Test
   public void testEbayRegister() {
+
     openSite();
+
+    goToRegisterPage();
 
     typeName();
 
@@ -28,6 +32,10 @@ public class EbayRegisterTest {
     typeEmail();
 
     typePassword();
+  }
+
+  public void goToRegisterPage() {
+    driver.findElement(By.linkText("register")).click();
   }
 
   public void typePassword() {
