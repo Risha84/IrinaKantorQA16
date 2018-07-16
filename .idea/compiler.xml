@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="firstProject_main" target="1.8" />
       <module name="firstProject_test" target="1.8" />
+      <module name="second-web-selenium-byRecorder_main" target="1.8" />
+      <module name="second-web-selenium-byRecorder_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

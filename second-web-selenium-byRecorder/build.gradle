@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'TelRan16'
+group 'TelRan'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -14,5 +14,5 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile 'org.seleniumhq.selenium:selenium-java:3.13.0'
-    compile 'org.testng:testng:6.14.3'
+    testCompile 'org.testng:testng:6.14.3'
 }
