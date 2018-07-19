@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="second-web-selenium-byRecorder:test" external.linked.project.path="$MODULE_DIR$/../../second-web-selenium-byRecorder" external.root.project.path="$MODULE_DIR$/../../second-web-selenium-byRecorder" external.system.id="GRADLE" external.system.module.group="TelRan" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="addressbook-web-tests:test" external.linked.project.path="$MODULE_DIR$/../../addressbook-web-tests" external.root.project.path="$MODULE_DIR$/../../addressbook-web-tests" external.system.id="GRADLE" external.system.module.group="TelRan" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../second-web-selenium-byRecorder/out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../addressbook-web-tests/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../second-web-selenium-byRecorder/src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../second-web-selenium-byRecorder/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../second-web-selenium-byRecorder/src/test/resources" type="java-test-resource" />
+    <content url="file://$MODULE_DIR$/../../addressbook-web-tests/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../addressbook-web-tests/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../addressbook-web-tests/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="second-web-selenium-byRecorder_main" />
+    <orderEntry type="module" module-name="addressbook-web-tests_main" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.testng:testng:6.14.3" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.13.0" level="project" />
@@ -39,5 +39,5 @@
     <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.14" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="second-web-selenium-byRecorder_main" />
+  <component name="TestModuleProperties" production-module="addressbook-web-tests_main" />
 </module>
