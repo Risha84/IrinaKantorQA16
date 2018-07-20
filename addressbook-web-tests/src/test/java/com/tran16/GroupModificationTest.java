@@ -13,9 +13,16 @@ import java.util.concurrent.TimeUnit;
 public class GroupModificationTest extends TestBase {
 
 
-
     @Test
-    public void testGroupModification () {
+    public void testGroupModification() {
+        goToGroupsPage();
+        selectGroup();
+        initGroupCreation();
+
+
+
+
+
         wd.findElement(By.linkText("groups")).click();
         wd.findElement(By.name("selected[]")).click();
         wd.findElement(By.name("edit")).click();
@@ -34,17 +41,4 @@ public class GroupModificationTest extends TestBase {
         wd.findElement(By.linkText("group page")).click();
     }
 
-
-
-    public void login() {
-        wd.findElement(By.name("user")).click();
-        wd.findElement(By.name("user")).clear();
-        wd.findElement(By.name("user")).sendKeys("admin");
-
-        wd.findElement(By.name("pass")).click();
-        wd.findElement(By.name("pass")).clear();
-        wd.findElement(By.name("pass")).sendKeys("secret");
-
-        wd.findElement(By.xpath("//*[@value='Login']")).click();
-    }
 }

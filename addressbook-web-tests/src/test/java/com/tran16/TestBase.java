@@ -72,6 +72,18 @@ public class TestBase {
         wd.findElement(By.name("new")).click();
     }
 
+    public void returnToGroupsPage() {
+        wd.findElement(By.linkText("group page")).click();
+    }
+
+    public void groupDeletion() {
+        wd.findElement(By.name("delete")).click();
+    }
+
+    public void selectGroup() {
+        wd.findElement(By.name("selected[]")).click();
+    }
+
     public void goToGroupsPage() {
         wd.findElement(By.linkText("groups")).click();
     }

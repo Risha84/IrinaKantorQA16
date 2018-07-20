@@ -10,25 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class GroupDeletionTest {
-    WebDriver wd;
-
-    @BeforeClass
-    public void setUp() {
-        wd = new FirefoxDriver();
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/");
-        wd.findElement(By.name("user")).click();
-        wd.findElement(By.name("user")).clear();
-        wd.findElement(By.name("user")).sendKeys("admin");
-
-        wd.findElement(By.name("pass")).click();
-        wd.findElement(By.name("pass")).clear();
-        wd.findElement(By.name("pass")).sendKeys("secret");
-
-        wd.findElement(By.xpath("//*[@value='Login']")).click();
-
-    }
+public class GroupDeletionTest extends TestBase {
 
     @Test
     public void test1() {
@@ -36,27 +18,6 @@ public class GroupDeletionTest {
         selectGroup();
         groupDeletion();
         returnToGroupsPage();
-    }
-
-    public void returnToGroupsPage() {
-        wd.findElement(By.linkText("group page")).click();
-    }
-
-    public void groupDeletion() {
-        wd.findElement(By.name("delete")).click();
-    }
-
-    public void selectGroup() {
-        wd.findElement(By.name("selected[]")).click();
-    }
-
-    public void goToGroupsPage() {
-        wd.findElement(By.linkText("groups")).click();
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        wd.quit();
     }
 }
 

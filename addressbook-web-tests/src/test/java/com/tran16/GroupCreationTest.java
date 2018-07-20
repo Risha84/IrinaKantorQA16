@@ -15,7 +15,7 @@ public class GroupCreationTest extends TestBase{
         public void testGroupCreation(){
                 goToGroupsPage();
                 initGroupCreation();
-                fillGroupsForm();
+                fillGroupsForm(name:"testGroupName1",);
                 submitGroupCreation();
                 returnToTheGroupsPage();
         }
