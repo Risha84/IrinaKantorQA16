@@ -8,11 +8,11 @@ public class ContactDeletionTest extends TestBase {
 
     @Test
     public void contactDeletionTest() {
-        int before = wd.findElements(By.name("selected[]")).size();
+        int before = getGroupsCount();
         selectContact();
         deleteContact();
         confirmAlert();
-        int after = wd.findElements(By.name("selected[]")).size();
+        int after = getGroupsCount();
         Assert.assertEquals(after, before - 1);
     }
 

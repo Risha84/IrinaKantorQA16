@@ -5,12 +5,16 @@ import org.testng.annotations.Test;
 public class ContactCreationTests extends TestBase {
     @Test
     public void testContactCreation() {
-        initContactCreation();
+              initContactCreation();
         fillContactForm(new ContactData()
-                .withFirstname("Risha")
+                .withFirstname("Irisha")
                 .withLastname("Cat")
-                .withAddress("Ukraina"));
+                .withAddress("Ukraina")
+                .withNickname("Risha")
+                .withCompany("Tel-Ran")
+                .withEmail("Irishechka@gmail.com"));
         createContact();
+        returnToTheHomePage();
 
     }
 

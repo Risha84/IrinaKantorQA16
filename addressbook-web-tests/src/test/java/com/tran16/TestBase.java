@@ -138,4 +138,8 @@ public class TestBase {
     public void selectContact() {
         wd.findElement(By.name("selected[]")).click();
     }
+
+    public int getGroupsCount() {
+        return wd.findElements(By.name("selected[]")).size();
+    }
 }
