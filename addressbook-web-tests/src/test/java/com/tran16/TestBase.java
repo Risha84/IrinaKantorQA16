@@ -1,6 +1,7 @@
 package com.tran16;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -33,8 +34,10 @@ public class TestBase {
         wd.get("http://localhost/addressbook/");
     }
 
-    public void goToGroupsPage(){
-        wd.findElement(By.linkText("groups")).click();
+    public void goToGroupsPage() {
+        // wd.findElement(By.linkText("groups")).click();
+       //wd.findElement(By.xpath(//*[@href='group.php'])).click();
+               wd.findElement(By.cssSelector("[href='group.php']")).click();
     }
 
     public void login() {
@@ -48,7 +51,6 @@ public class TestBase {
 
         wd.findElement(By.xpath("//*[@value='Login']")).click();
     }
-
 
 
     public void submitGroupCreation() {
@@ -71,9 +73,11 @@ public class TestBase {
     }
 
     public void initGroupCreation() {
-        wd.findElement(By.name("new")).click();
-    }
 
+        //   wd.findElement(By.name("new")).click();
+        wd.findElement(By.xpath("//*@value='New group'][2]")).click();
+        //[value='New group']
+    }
 
 
     public void groupDeletion() {
@@ -84,6 +88,9 @@ public class TestBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
+    public void selectGroupByIndex(int ind) {
+        wd.findElements(By.name("selected[]")).get(ind).click();
+    }
 
 
     public void createContact() {
@@ -93,6 +100,7 @@ public class TestBase {
     public void returnToTheGroupsPage() {
         wd.findElement(By.linkText("group page")).click();
     }
+
     public void returnToTheHomePage() {
         wd.findElement(By.linkText("home")).click();
 
@@ -102,7 +110,6 @@ public class TestBase {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-
 
 
         wd.findElement(By.name("lastname")).click();
@@ -124,7 +131,8 @@ public class TestBase {
     }
 
     public void initGroupModification() {
-        wd.findElement(By.name("edit")).click();
+
+        wd.findElement(By.cssSelector("//*[@name='edit'][1]")).click();
     }
 
     public void confirmAlert() {
@@ -140,6 +148,47 @@ public class TestBase {
     }
 
     public int getGroupsCount() {
-        return wd.findElements(By.name("selected[]")).size();
+        return wd.findElements(By.cssSelector("span group")).size();
     }
+
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+    public boolean isElementsPresent(By locator){
+return wd.findElements(locator).size()>0;
+
+    }
+public boolean isGroupPresent(){
+        return isElementPresent(By.name("selected[]"));
+}
+public void createGroup(){
+    initGroupCreation();
+    fillGroupsForm(new GroupData()
+            .withName("testGroupName1")
+            .withHeader("testGroupHeader1")
+            .withFooter("testGroupFooter1"));
+    submitGroupCreation();
+    returnToTheGroupsPage();
+}
+    public boolean isContactPresent(){
+        return isElementPresent(By.name("selected[]"));
+    }
+    public void createContactField(){
+        initContactCreation();
+    fillContactForm(new ContactData()
+                .withFirstname("Irisha")
+                .withLastname("Cat")
+                .withAddress("Ukraina")
+                .withNickname("Risha")
+                .withCompany("Tel-Ran")
+                .withEmail("Irishechka@gmail.com"));
+        createContact();
+        returnToTheHomePage();
+
+}
 }

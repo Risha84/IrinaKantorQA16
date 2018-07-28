@@ -9,16 +9,21 @@ public class GroupModificationTest extends TestBase {
     @Test
     public void testGroupModification() {
         goToGroupsPage();
+        if(!isGroupPresent()){
+            createGroup();
+        }
         int before = getGroupsCount();
         selectGroup();
         initGroupModification();
-        fillGroupsForm(new GroupData().withName("")
-        .withHeader("")
-        .withFooter(""));
+        fillGroupsForm(new GroupData()
+
+                .withName("modifiedTestGroupName1")
+                .withHeader("modifiedTestGroupHeader1")
+                .withFooter("modifiedTestGroupFooter1"));
         submitGroupModification();
         returnToTheGroupsPage();
         int after = getGroupsCount();
-        Assert.assertEquals(after,before);
+        Assert.assertEquals(after, before);
 
     }
 

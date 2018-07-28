@@ -39,7 +39,7 @@ public class GroupCreationTest extends TestBase {
         fillGroupsForm(new GroupData()
                 .withName("testGroupName10000000000000000000000000")
                 .withHeader("testGroupHeader1")
-                .withFooter("testGroupHeader1"));
+                .withFooter("testGroupFooter1"));
         submitGroupCreation();
         returnToTheGroupsPage();
         int after = getGroupsCount();
