@@ -13,7 +13,7 @@ public class ContactCreationTests extends TestBase {
                 .withNickname("Risha")
                 .withCompany("Tel-Ran")
                 .withEmail("Irishechka@gmail.com"));
-        createContact();
+        submitContactCreation();
         returnToTheHomePage();
 
     }

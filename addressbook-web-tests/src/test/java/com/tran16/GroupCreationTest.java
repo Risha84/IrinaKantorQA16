@@ -9,6 +9,7 @@ public class GroupCreationTest extends TestBase {
     @Test
     public void testGroupCreation() {
         goToGroupsPage();
+       int before= getGroupsCount();
         initGroupCreation();
         fillGroupsForm(new GroupData()
                 .withName("testGroupName1")
@@ -16,11 +17,14 @@ public class GroupCreationTest extends TestBase {
                 .withFooter("testGroupFooter1"));
         submitGroupCreation();
         returnToTheGroupsPage();
+       int after = getGroupsCount();
+        Assert.assertEquals(after,before+1);
     }
 
     @Test
     public void testGroupCreationWithEmptyFields() {
         goToGroupsPage();
+        int before= getGroupsCount();
         initGroupCreation();
         fillGroupsForm(new GroupData()
                 .withName("")
@@ -28,7 +32,8 @@ public class GroupCreationTest extends TestBase {
                 .withHeader(""));
         submitGroupCreation();
         returnToTheGroupsPage();
-
+       int after = getGroupsCount();
+       Assert.assertEquals(after,before+1);
 
     }
 @Test

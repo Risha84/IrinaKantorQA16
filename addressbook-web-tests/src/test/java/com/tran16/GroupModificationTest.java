@@ -16,7 +16,6 @@ public class GroupModificationTest extends TestBase {
         selectGroup();
         initGroupModification();
         fillGroupsForm(new GroupData()
-
                 .withName("modifiedTestGroupName1")
                 .withHeader("modifiedTestGroupHeader1")
                 .withFooter("modifiedTestGroupFooter1"));

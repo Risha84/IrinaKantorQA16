@@ -1,6 +1,5 @@
 package com.tran16;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,11 +7,14 @@ public class ContactDeletionTest extends TestBase {
 
     @Test
     public void contactDeletionTest() {
-        int before = getGroupsCount();
+        if(!isContactPresent()){
+            createContact();
+        }
+        int before = getContactCount();
         selectContact();
-        deleteContact();
+        contactDeletion();
         confirmAlert();
-        int after = getGroupsCount();
+        int after = getContactCount();
         Assert.assertEquals(after, before - 1);
     }
 
