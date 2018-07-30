@@ -7,14 +7,14 @@ public class ContactDeletionTest extends TestBase {
 
     @Test
     public void contactDeletionTest() {
-        if(!isContactPresent()){
-            createContact();
+        if(!app.isContactPresent()){
+            app.createContact();
         }
-        int before = getContactCount();
-        selectContact();
-        contactDeletion();
-        confirmAlert();
-        int after = getContactCount();
+        int before = app.getContactCount();
+        app.selectContact();
+        app.contactDeletion();
+        app.confirmAlert();
+        int after = app.getContactCount();
         Assert.assertEquals(after, before - 1);
     }
 
