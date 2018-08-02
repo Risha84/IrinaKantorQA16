@@ -10,10 +10,11 @@ public class GroupCreationTest extends TestBase {
         app.getGroupHelper().goToGroupsPage();
        int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupsForm(new GroupData()
+        final GroupData groupData = new GroupData()
                 .withName("testGroupName1")
                 .withHeader("testGroupHeader1")
-                .withFooter("testGroupFooter1"));
+                .withFooter("testGroupFooter1");
+        app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToTheGroupsPage();
        int after = app.getGroupHelper().getGroupsCount();
@@ -25,10 +26,11 @@ public class GroupCreationTest extends TestBase {
         app.getGroupHelper().goToGroupsPage();
         int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupsForm(new GroupData()
+        final GroupData groupData = new GroupData()
                 .withName("")
                 .withFooter("")
-                .withHeader(""));
+                .withHeader("");
+        app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToTheGroupsPage();
        int after = app.getGroupHelper().getGroupsCount();
@@ -40,10 +42,11 @@ public class GroupCreationTest extends TestBase {
         app.getGroupHelper().goToGroupsPage();
         int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupsForm(new GroupData()
-                .withName("testGroupName10000000000000000000000000")
-                .withHeader("testGroupHeader1")
-                .withFooter("testGroupFooter1"));
+    final GroupData groupData = new GroupData()
+            .withName("testGroupName10000000000000000000000000")
+            .withHeader("testGroupHeader1")
+            .withFooter("testGroupFooter1");
+    app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToTheGroupsPage();
         int after = app.getGroupHelper().getGroupsCount();

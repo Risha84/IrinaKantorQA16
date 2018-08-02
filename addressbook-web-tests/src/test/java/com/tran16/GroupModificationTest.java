@@ -15,10 +15,11 @@ public class GroupModificationTest extends TestBase {
         int before = app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
-        app.getGroupHelper().fillGroupsForm(new GroupData()
+        final GroupData groupData = new GroupData()
                 .withName("modifiedTestGroupName1")
                 .withHeader("modifiedTestGroupHeader1")
-                .withFooter("modifiedTestGroupFooter1"));
+                .withFooter("modifiedTestGroupFooter1");
+        app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToTheGroupsPage();
         int after = app.getGroupHelper().getGroupsCount();

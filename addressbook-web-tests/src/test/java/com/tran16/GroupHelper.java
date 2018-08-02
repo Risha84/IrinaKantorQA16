@@ -7,49 +7,46 @@ public class GroupHelper extends HelperBase{
 
 
     public GroupHelper(WebDriver wd) {
-       super(wd);
+
+        super(wd);
     }
 
     public void goToGroupsPage() {
-        //wd.findElement(By.linkText("groups")).click();
-        //wd.findElement(By.xpath("//*[@href='group.php']")).click();
-         wd.findElement(By.cssSelector("[href='group.php']")).click();
+               click(By.cssSelector("[href='group.php']"));
     }
+
+
 
     public void submitGroupCreation() {
-        //wd.findElement(By.name("submit")).click();
-       wd.findElement(By.xpath("//*[@value='Enter information']")).click();
+              click(By.xpath("//*[@value='Enter information']"));
 
 
     }
 
-    public void fillGroupsForm(GroupData groupData) {
-        wd.findElement(By.name("group_name")).click();
-        wd.findElement(By.name("group_name")).clear();
-        wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
+    public void fillGroupsForm(GroupData groupData, String text) {
+        type(By.name("group_name"), groupData.getName());
 
-        wd.findElement(By.name("group_header")).click();
-        wd.findElement(By.name("group_header")).clear();
-        wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
+        type(By.name("group_header"), groupData.getHeader());
 
-        wd.findElement(By.name("group_footer")).click();
-        wd.findElement(By.name("group_footer")).clear();
-        wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
+        type(By.name("group_footer"),groupData.getFooter());
+    }
+
+    public void type(By locator, String text) {
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
     }
 
     public void initGroupCreation() {
-
-         // wd.findElement(By.name("new")).click();
-       // wd.findElement(By.xpath("//*[@value='New group'][1]")).click();
-        wd.findElement(By.xpath("//*[@name='new'][1]")).click();
+        click(By.xpath("//*[@name='new'][1]"));
     }
 
     public void groupDeletion() {
-        wd.findElement(By.name("delete")).click();
+        click(By.name("delete"));
     }
 
     public void selectGroup() {
-        wd.findElement(By.name("selected[]")).click();
+        click(By.name("selected[]"));
     }
 
     public void selectGroupByIndex(int ind) {
@@ -60,19 +57,14 @@ public class GroupHelper extends HelperBase{
         click(By.linkText("group page"));
     }
 
-    public void click(By locator) {
-        wd.findElement(locator).click();
-    }
 
     public void submitGroupModification() {
-        wd.findElement(By.name("update")).click();
+        click(By.name("update"));
     }
 
     public void initGroupModification() {
-
-       // wd.findElement(By.cssSelector("//*[@name='edit'][1]")).click();
-        wd.findElement(By.xpath("//*[@name='edit'][1]")).click();
-        wd.findElement(By.xpath("//*[@name='new'][2]")).click();
+        click(By.xpath("//*[@name='edit'][1]"));
+      //  click(By.xpath("//*[@name='new'][2]"));
     }
 
     public int getGroupsCount() {
@@ -83,10 +75,11 @@ public class GroupHelper extends HelperBase{
 
     public void createGroup(){
     initGroupCreation();
-    fillGroupsForm(new GroupData()
-            .withName("testGroupName1")
-            .withHeader("testGroupHeader1")
-            .withFooter("testGroupFooter1"));
+        final GroupData groupData = new GroupData()
+                .withName("testGroupName1")
+                .withHeader("testGroupHeader1")
+                .withFooter("testGroupFooter1");
+        fillGroupsForm(groupData, groupData.getFooter());
     submitGroupCreation();
     returnToTheGroupsPage();
 }

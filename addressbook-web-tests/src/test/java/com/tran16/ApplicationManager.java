@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager {
-
+public class ApplicationManager  {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     private WebDriver wd;
@@ -23,9 +22,6 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(wd);
     }
 
-    public void click(By locator){
-        wd.findElement(locator).click();
-    }
 
     public void windowMax() {
         wd.manage().window().maximize();
