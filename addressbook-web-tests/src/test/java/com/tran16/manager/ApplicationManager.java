@@ -1,5 +1,6 @@
-package com.tran16;
+package com.tran16.manager;
 
+import com.tran16.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager  {
+public class ApplicationManager {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     private WebDriver wd;
@@ -18,10 +19,19 @@ public class ApplicationManager  {
         sessionHelper = new SessionHelper(wd);
         sessionHelper.openSite("http://localhost/addressbook/");
         windowMax();
-        sessionHelper.login("admin","secret");
+        sessionHelper.login("admin", "secret");
         groupHelper = new GroupHelper(wd);
+
     }
 
+   /* public void esurePrecondition(){
+        logout();
+
+    }*/
+
+  /*  private void logout() {
+      wd.findElement((By.xpath("//a[contains(text(),'Logout')]"))).click();
+    }*/
 
     public void windowMax() {
         wd.manage().window().maximize();
@@ -81,7 +91,7 @@ public class ApplicationManager  {
     public void initContactModification() {
 
         wd.findElement(By.xpath("//*[@alt='Edit'][1]")).click();
-}
+    }
 
     public void confirmAlert() {
         wd.switchTo().alert().accept();
@@ -96,11 +106,11 @@ public class ApplicationManager  {
     }
 
 
-
-    public boolean isElementsPresent(By locator){
-return wd.findElements(locator).size()>0;
+    public boolean isElementsPresent(By locator) {
+        return wd.findElements(locator).size() > 0;
 
     }
+
     public boolean isElementPresent(By locator) {
         try {
             wd.findElement(locator);
@@ -110,13 +120,13 @@ return wd.findElements(locator).size()>0;
         }
     }
 
-    public boolean isContactPresent(){
+    public boolean isContactPresent() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public void createContact(){
+    public void createContact() {
         initContactCreation();
-    fillContactForm(new ContactData()
+        fillContactForm(new ContactData()
                 .withFirstname("Irisha")
                 .withLastname("Cat")
                 .withAddress("Ukraina")
@@ -126,9 +136,9 @@ return wd.findElements(locator).size()>0;
         submitContactCreation();
         returnToTheHomePage();
 
-}
+    }
 
-    public void selectContactByIndex(int ind){
+    public void selectContactByIndex(int ind) {
         wd.findElements(By.name("selected[]")).get(ind).click();
     }
 
@@ -136,9 +146,6 @@ return wd.findElements(locator).size()>0;
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public boolean areEltsPresent(By locator) {
-        return wd.findElements(locator).size()>0;
-    }
 
     public GroupHelper getGroupHelper() {
         return groupHelper;

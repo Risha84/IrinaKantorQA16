@@ -1,4 +1,4 @@
-package com.tran16;
+package com.tran16.manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

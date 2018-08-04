@@ -1,4 +1,4 @@
-package com.tran16;
+package com.tran16.model;
 
 public class GroupData {
     private String name;

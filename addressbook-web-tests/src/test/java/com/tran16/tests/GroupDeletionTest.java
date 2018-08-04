@@ -1,5 +1,6 @@
-package com.tran16;
+package com.tran16.tests;
 
+import com.tran16.manager.TestBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -35,7 +36,7 @@ public class GroupDeletionTest extends TestBase {
     @Test
     public void deletionGroupTest2() {
         app.getGroupHelper().goToGroupsPage();
-        if(!app.areEltsPresent(By.name("selected[]"))){
+        if(!app.isElementsPresent(By.name("selected[]"))){
             app.getGroupHelper().createGroup();
         }
         int before = app.getGroupHelper().getGroupsCount();
