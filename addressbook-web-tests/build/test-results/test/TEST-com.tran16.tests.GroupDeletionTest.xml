@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tran16.tests.GroupDeletionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:46:42" hostname="DESKTOP-KFEGBU6" time="1.36">
+  <properties/>
+  <testcase name="deletionFirstGroupTest" classname="com.tran16.tests.GroupDeletionTest" time="0.459"/>
+  <testcase name="deletionGroupTest2" classname="com.tran16.tests.GroupDeletionTest" time="0.433"/>
+  <testcase name="deletionLastGroupTest" classname="com.tran16.tests.GroupDeletionTest" time="0.466"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

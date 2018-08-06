@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tran16.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:46:45" hostname="DESKTOP-KFEGBU6" time="2.097">
+  <properties/>
+  <testcase name="testContactModification" classname="com.tran16.tests.ContactModificationTest" time="2.097"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
