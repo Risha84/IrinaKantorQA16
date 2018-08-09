@@ -4,13 +4,13 @@ import com.tran16.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ContactHelper {
-    WebDriver wd;
+public class ContactHelper extends HelperBase {
+
 
     public ContactHelper(WebDriver wd) {
-        //33 min
 
-        this.wd = wd;
+
+        super(wd);
     }
 
 
@@ -30,31 +30,12 @@ public class ContactHelper {
     }
 
     public void fillContactForm(ContactData contactData) {
-        wd.findElement(By.name("firstname")).click();
-        wd.findElement(By.name("firstname")).clear();
-        wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-
-
-        wd.findElement(By.name("lastname")).click();
-        wd.findElement(By.name("lastname")).clear();
-        wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
-
-
-        wd.findElement(By.name("address")).click();
-        wd.findElement(By.name("address")).clear();
-        wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
-
-        wd.findElement(By.name("nickname")).click();
-        wd.findElement(By.name("nickname")).clear();
-        wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
-
-        wd.findElement(By.name("company")).click();
-        wd.findElement(By.name("company")).clear();
-        wd.findElement(By.name("company")).sendKeys(contactData.getCompany());
-
-        wd.findElement(By.name("email")).click();
-        wd.findElement(By.name("email")).clear();
-        wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
+        type(By.name("firstname"), contactData.getFirstname());
+        type(By.name("lastname"), contactData.getLastname());
+        type(By.name("address"), contactData.getAddress());
+        type(By.name("nickname"), contactData.getNickname());
+        type(By.name("company"), contactData.getCompany());
+        type(By.name("email"), contactData.getEmail());
     }
 
     public void initContactCreation() {
@@ -64,10 +45,6 @@ public class ContactHelper {
     public void initContactModification() {
 
         wd.findElement(By.xpath("//*[@alt='Edit'][1]")).click();
-    }
-
-    public void confirmAlert() {
-        wd.switchTo().alert().accept();
     }
 
     public void contactDeletion() {
@@ -92,6 +69,12 @@ public class ContactHelper {
 
     }
 
+    public void isOnContactsPage() {
+        if (!isContactPresent(By.id("maintable"))) {
+            click(By.xpath("//a[@href='./'"));
+        }
+    }
+
     public void selectContactByIndex(int ind) {
         wd.findElements(By.name("selected[]")).get(ind).click();
     }
@@ -99,4 +82,9 @@ public class ContactHelper {
     public int getContactCount() {
         return wd.findElements(By.name("selected[]")).size();
     }
+
+    public boolean isContactPresent() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
 }

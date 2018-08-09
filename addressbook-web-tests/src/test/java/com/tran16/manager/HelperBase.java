@@ -15,12 +15,23 @@ public class HelperBase {
     public void click(By locator) {
         wd.findElement(locator).click();
     }
+
     public void type(By locator, String text) {
-        click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if (text != null) {
+            click(locator);
+            wd.findElement(locator).clear();
+            wd.findElement(locator).sendKeys(text);
+        }
+
     }
 
+    public void confirmAlert() {
+        wd.switchTo().alert().accept();
+    }
+
+    public void dismissAlert(){
+        wd.switchTo().alert().dismiss();
+    }
     public boolean isElementPresent(By locator) {
         try {
             wd.findElement(locator);
@@ -28,5 +39,8 @@ public class HelperBase {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+    public boolean isGroupPresent(){
+        return isElementPresent(By.name("selected[]"));
     }
 }

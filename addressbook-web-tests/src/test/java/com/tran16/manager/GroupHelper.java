@@ -89,7 +89,5 @@ public class GroupHelper extends HelperBase {
     submitGroupCreation();
     returnToTheGroupsPage();
 }
-    public boolean isGroupPresent(){
-        return isElementPresent(By.name("selected[]"));
-    }
+
 }

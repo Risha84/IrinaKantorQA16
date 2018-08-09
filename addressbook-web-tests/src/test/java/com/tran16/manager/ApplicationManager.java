@@ -40,18 +40,9 @@ public class ApplicationManager {
 
     }
 
-    public boolean isElementPresent(By locator) {
-        try {
-            wd.findElement(locator);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
 
-    public boolean isContactPresent() {
-        return isElementPresent(By.name("selected[]"));
-    }
+
+
 
 
     public GroupHelper getGroupHelper() {

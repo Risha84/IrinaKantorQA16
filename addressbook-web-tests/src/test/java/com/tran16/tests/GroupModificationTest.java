@@ -1,6 +1,5 @@
 package com.tran16.tests;
 
-import com.tran16.manager.TestBase;
 import com.tran16.model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
