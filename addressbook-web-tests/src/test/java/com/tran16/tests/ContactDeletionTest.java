@@ -7,7 +7,7 @@ public class ContactDeletionTest extends TestBase {
 
     @Test
     public void contactDeletionTest() {
-        if(!app.isContactPresent()){
+        if(!app.getContactHelper().isContactPresent()){
             app.getContactHelper().createContact();
         }
         int before = app.getContactHelper().getContactCount();

@@ -2,6 +2,7 @@ package com.tran16.manager;
 
 import com.tran16.model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class GroupHelper extends HelperBase {
@@ -12,18 +13,9 @@ public class GroupHelper extends HelperBase {
         super(wd);
     }
 
-    public void goToGroupsPage()
-    {
-        if(!isElementPresent(By.xpath("//h1[contains(text(),'Groups')]"))
-                &&!isElementPresent(By.name("new"))){
-            click(By.cssSelector("[href='group.php']"));
-        }
-    }
-
-
 
     public void submitGroupCreation() {
-              click(By.xpath("//*[@value='Enter information']"));
+        click(By.xpath("//*[@value='Enter information']"));
 
 
     }
@@ -33,7 +25,7 @@ public class GroupHelper extends HelperBase {
 
         type(By.name("group_header"), groupData.getHeader());
 
-        type(By.name("group_footer"),groupData.getFooter());
+        type(By.name("group_footer"), groupData.getFooter());
     }
 
     public void type(By locator, String text) {
@@ -70,7 +62,7 @@ public class GroupHelper extends HelperBase {
 
     public void initGroupModification() {
         click(By.xpath("//*[@name='edit'][1]"));
-      //  click(By.xpath("//*[@name='new'][2]"));
+        //  click(By.xpath("//*[@name='new'][2]"));
     }
 
     public int getGroupsCount() {
@@ -78,16 +70,34 @@ public class GroupHelper extends HelperBase {
     }
 
 
-
-    public void createGroup(){
-    initGroupCreation();
+    public void createGroup() {
+        initGroupCreation();
         final GroupData groupData = new GroupData()
                 .withName("testGroupName1")
                 .withHeader("testGroupHeader1")
                 .withFooter("testGroupFooter1");
         fillGroupsForm(groupData, groupData.getFooter());
-    submitGroupCreation();
-    returnToTheGroupsPage();
-}
+        submitGroupCreation();
+        returnToTheGroupsPage();
+    }
 
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean isGroupPresent() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public void goToGroupsPage() {
+        if (!isElementPresent(By.xpath("//h1[contains(text(),'Groups')]"))
+                && !isElementPresent(By.name("new"))) {
+            wd.findElement(By.cssSelector("[href='group.php']")).click();
+        }
+    }
 }

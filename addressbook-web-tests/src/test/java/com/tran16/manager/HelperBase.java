@@ -8,8 +8,17 @@ public class HelperBase {
     public WebDriver wd;
 
 
-    public HelperBase(WebDriver wd){
-        this.wd=wd;
+    public HelperBase(WebDriver wd) {
+        this.wd = wd;
+    }
+
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public void click(By locator) {
@@ -29,18 +38,9 @@ public class HelperBase {
         wd.switchTo().alert().accept();
     }
 
-    public void dismissAlert(){
+    public void dismissAlert() {
         wd.switchTo().alert().dismiss();
     }
-    public boolean isElementPresent(By locator) {
-        try {
-            wd.findElement(locator);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-    public boolean isGroupPresent(){
-        return isElementPresent(By.name("selected[]"));
-    }
+
+
 }

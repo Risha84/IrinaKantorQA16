@@ -1,11 +1,15 @@
 package com.tran16.tests;
 
 import com.tran16.manager.ApplicationManager;
+import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
+    /*protected static ApplicationManager app =
+            new ApplicationManager
+                    (System.getProperty("browser", BrowserType.CHROME));*/
     static ApplicationManager app = new ApplicationManager();
 
     @BeforeSuite

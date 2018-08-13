@@ -2,6 +2,7 @@ package com.tran16.manager;
 
 import com.tran16.model.ContactData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class ContactHelper extends HelperBase {
@@ -39,7 +40,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void initContactCreation() {
-        wd.findElement(By.linkText("add new")).click();
+        wd.findElement(By.xpath("//*[@href='edit.php']")).click();
     }
 
     public void initContactModification() {
@@ -69,12 +70,12 @@ public class ContactHelper extends HelperBase {
 
     }
 
-    public void isOnContactsPage() {
+   /* public void isOnContactsPage() {
         if (!isContactPresent(By.id("maintable"))) {
             click(By.xpath("//a[@href='./'"));
         }
     }
-
+*/
     public void selectContactByIndex(int ind) {
         wd.findElements(By.name("selected[]")).get(ind).click();
     }
@@ -86,5 +87,8 @@ public class ContactHelper extends HelperBase {
     public boolean isContactPresent() {
         return isElementPresent(By.name("selected[]"));
     }
+
+
+
 
 }

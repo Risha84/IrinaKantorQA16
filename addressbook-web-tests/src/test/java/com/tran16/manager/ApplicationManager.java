@@ -1,8 +1,6 @@
 package com.tran16.manager;
 
-import com.tran16.model.ContactData;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -41,10 +39,6 @@ public class ApplicationManager {
     }
 
 
-
-
-
-
     public GroupHelper getGroupHelper() {
         return groupHelper;
     }
@@ -56,4 +50,5 @@ public class ApplicationManager {
     public ContactHelper getContactHelper() {
         return contactHelper;
     }
+
 }

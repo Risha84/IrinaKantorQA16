@@ -22,4 +22,8 @@ public class SessionHelper extends HelperBase {
     public void logout() {
         click(By.xpath("//a[contains(text(),'Logout')]"));
     }
+
+    public boolean isLoggedIn() {
+        return isElementPresent(By.linkText("Logout"));
+    }
 }
