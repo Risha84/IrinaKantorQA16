@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
     @Test
-    public void testContactCreation() {
+    public void testContactCreation() throws InterruptedException {
               app.getContactHelper().initContactCreation();
         app.getContactHelper().fillContactForm(new ContactData()
                 .withFirstname("Irisha")

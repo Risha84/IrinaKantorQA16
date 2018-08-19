@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:46:40" hostname="DESKTOP-KFEGBU6" time="1.419">
+<testsuite name="com.tran16.tests.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:31" hostname="DESKTOP-KFEGBU6" time="4.234">
   <properties/>
-  <testcase name="testGroupModification" classname="com.tran16.tests.GroupModificationTest" time="1.419"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testGroupModification" classname="com.tran16.tests.GroupModificationTest" time="4.234"/>
+  <system-out><![CDATA[[Groupid=0, name=''}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
+[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

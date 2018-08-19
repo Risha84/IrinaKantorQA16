@@ -15,8 +15,9 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public void submitContactCreation() {
+    public void submitContactCreation() throws InterruptedException {
         wd.findElement(By.name("submit")).click();
+        Thread.sleep(2000);
 
     }
 
@@ -56,7 +57,7 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    public void createContact() {
+    public void createContact() throws InterruptedException {
         initContactCreation();
         fillContactForm(new ContactData()
                 .withFirstname("Irisha")

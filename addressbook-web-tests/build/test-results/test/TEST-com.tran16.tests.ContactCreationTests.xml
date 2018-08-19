@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:46:43" hostname="DESKTOP-KFEGBU6" time="2.117">
+<testsuite name="com.tran16.tests.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:43" hostname="DESKTOP-KFEGBU6" time="4.174">
   <properties/>
-  <testcase name="testContactCreation" classname="com.tran16.tests.ContactCreationTests" time="2.117"/>
+  <testcase name="testContactCreation" classname="com.tran16.tests.ContactCreationTests" time="4.174"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

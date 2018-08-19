@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.GroupCreationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:46:26" hostname="DESKTOP-KFEGBU6" time="14.245">
+<testsuite name="com.tran16.tests.GroupCreationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:08" hostname="DESKTOP-KFEGBU6" time="22.886">
   <properties/>
-  <testcase name="testGroupCreation" classname="com.tran16.tests.GroupCreationTest" time="11.78"/>
-  <testcase name="testGroupCreationWithEmptyFields" classname="com.tran16.tests.GroupCreationTest" time="1.091"/>
-  <testcase name="testGroupCreationWithLongName" classname="com.tran16.tests.GroupCreationTest" time="1.369"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testGetGroupsList" classname="com.tran16.tests.GroupCreationTest" time="10.596"/>
+  <testcase name="testGroupCreation" classname="com.tran16.tests.GroupCreationTest" time="3.983"/>
+  <testcase name="testGroupCreationWithEmptyFields" classname="com.tran16.tests.GroupCreationTest" time="3.308"/>
+  <testcase name="testGroupCreationWithLongName" classname="com.tran16.tests.GroupCreationTest" time="4.996"/>
+  <system-out><![CDATA[[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

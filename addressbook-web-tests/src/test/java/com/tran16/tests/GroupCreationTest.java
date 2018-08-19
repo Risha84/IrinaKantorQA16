@@ -4,12 +4,15 @@ import com.tran16.model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class GroupCreationTest extends TestBase {
 
     @Test
-    public void testGroupCreation() {
+    public void testGroupCreation() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
-       int before= app.getGroupHelper().getGroupsCount();
+        List<GroupData> groupsListBefore=app.getGroupHelper().getGroupsList();
+      // int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
         final GroupData groupData = new GroupData()
                 .withName("testGroupName1")
@@ -18,12 +21,14 @@ public class GroupCreationTest extends TestBase {
         app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToTheGroupsPage();
-       int after = app.getGroupHelper().getGroupsCount();
-        Assert.assertEquals(after,before+1);
+        List<GroupData> groupsListAfter=app.getGroupHelper().getGroupsList();
+        Assert.assertEquals(groupsListAfter.size(),groupsListBefore.size()+1);
+        // int after = app.getGroupHelper().getGroupsCount();
+      //  Assert.assertEquals(after,before+1);
     }
 
     @Test
-    public void testGroupCreationWithEmptyFields() {
+    public void testGroupCreationWithEmptyFields() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
         int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
@@ -39,7 +44,7 @@ public class GroupCreationTest extends TestBase {
 
     }
 @Test
-    public void testGroupCreationWithLongName(){
+    public void testGroupCreationWithLongName() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
         int before= app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
@@ -53,5 +58,11 @@ public class GroupCreationTest extends TestBase {
         int after = app.getGroupHelper().getGroupsCount();
     Assert.assertEquals(after,before+1);
 }
+@Test
+    public void testGetGroupsList(){
+        app.getGroupHelper().goToGroupsPage();
+        app.getGroupHelper().getGroupsList();
+}
+
 
 }

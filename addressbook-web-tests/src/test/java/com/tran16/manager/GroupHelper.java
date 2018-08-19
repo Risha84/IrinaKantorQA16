@@ -4,6 +4,10 @@ import com.tran16.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupHelper extends HelperBase {
 
@@ -51,8 +55,9 @@ public class GroupHelper extends HelperBase {
         wd.findElements(By.name("selected[]")).get(ind).click();
     }
 
-    public void returnToTheGroupsPage() {
+    public void returnToTheGroupsPage() throws InterruptedException {
         click(By.linkText("group page"));
+        Thread.sleep(2000);
     }
 
 
@@ -70,7 +75,7 @@ public class GroupHelper extends HelperBase {
     }
 
 
-    public void createGroup() {
+    public void createGroup() throws InterruptedException {
         initGroupCreation();
         final GroupData groupData = new GroupData()
                 .withName("testGroupName1")
@@ -100,4 +105,19 @@ public class GroupHelper extends HelperBase {
             wd.findElement(By.cssSelector("[href='group.php']")).click();
         }
     }
+
+    public List<GroupData> getGroupsList() {
+        List<GroupData> groups = new ArrayList<>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+        for(WebElement element:elements){
+            String name = element.getText();
+            int id = Integer.parseInt(
+            element.findElement(By.tagName("input")).getAttribute("value"));
+            GroupData group = new GroupData().withName(name);
+            groups.add(group);
+        }
+        System.out.println(groups);
+        return groups;
+    }
 }
+
