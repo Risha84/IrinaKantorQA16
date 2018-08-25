@@ -1,13 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.GroupCreationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:08" hostname="DESKTOP-KFEGBU6" time="22.886">
+<testsuite name="com.tran16.tests.GroupCreationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-08-25T16:20:14" hostname="DESKTOP-KFEGBU6" time="21.448">
   <properties/>
-  <testcase name="testGetGroupsList" classname="com.tran16.tests.GroupCreationTest" time="10.596"/>
-  <testcase name="testGroupCreation" classname="com.tran16.tests.GroupCreationTest" time="3.983"/>
-  <testcase name="testGroupCreationWithEmptyFields" classname="com.tran16.tests.GroupCreationTest" time="3.308"/>
-  <testcase name="testGroupCreationWithLongName" classname="com.tran16.tests.GroupCreationTest" time="4.996"/>
-  <system-out><![CDATA[[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
-[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
-[Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+  <testcase name="testGetGroupsList" classname="com.tran16.tests.GroupCreationTest" time="11.27"/>
+  <testcase name="testGroupCreation" classname="com.tran16.tests.GroupCreationTest" time="3.735"/>
+  <testcase name="testGroupCreationWithEmptyFields" classname="com.tran16.tests.GroupCreationTest" time="3.129"/>
+  <testcase name="testGroupCreationWithLongName" classname="com.tran16.tests.GroupCreationTest" time="3.303"/>
+  <system-out><![CDATA[19:20:14.555 [Test worker] INFO  com.tran16.tests.TestBase - Start test testGetGroupsList
+elementBy.xpath: //h1[contains(text(),'Groups')]
+19:20:19.950 [Test worker] ERROR com.tran16.tests.TestBase - ERROR!!!screen-1535214019950.pngorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[contains(text(),'Groups')]"}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-KFEGBU6', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\vodya\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}
+Session ID: a4dd1ef2209f5e2dd6395a3befcafc2f
+*** Element info: {Using=xpath, value=//h1[contains(text(),'Groups')]}
+elementBy.name: new
+19:20:25.336 [Test worker] ERROR com.tran16.tests.TestBase - ERROR!!!screen-1535214025335.pngorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"new"}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-KFEGBU6', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\vodya\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}
+Session ID: a4dd1ef2209f5e2dd6395a3befcafc2f
+*** Element info: {Using=name, value=new}
+elementBy.cssSelector: [href='group.php']
+19:20:25.368 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: [href='group.php']found
+elementBy.cssSelector: span.group
+19:20:25.631 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: span.groupfound
+elementBy.tagName: input
+19:20:25.691 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:25.755 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:25.817 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+elementBy.xpath: //h1[contains(text(),'Groups')]
+19:20:25.846 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //h1[contains(text(),'Groups')]found
+elementBy.cssSelector: span.group
+19:20:25.862 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: span.groupfound
+elementBy.tagName: input
+19:20:25.891 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:25.924 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:25.956 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+elementBy.xpath: //*[@name='new'][1]
+19:20:25.987 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@name='new'][1]found
+elementBy.name: group_name
+19:20:26.159 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:26.262 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:26.306 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_header
+19:20:26.430 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:26.507 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:26.557 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_footer
+19:20:26.673 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:26.764 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:26.807 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.xpath: //*[@value='Enter information']
+19:20:26.922 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@value='Enter information']found
+elementBy.linkText: group page
+19:20:27.130 [Test worker] INFO  com.tran16.tests.TestBase - By.linkText: group pagefound
+elementBy.cssSelector: span.group
+19:20:29.273 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: span.groupfound
+elementBy.tagName: input
+19:20:29.323 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:29.388 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:29.445 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:29.501 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}]
+elementBy.xpath: //h1[contains(text(),'Groups')]
+19:20:29.596 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //h1[contains(text(),'Groups')]found
+elementBy.name: selected[]
+19:20:29.621 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //*[@name='new'][1]
+19:20:29.644 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@name='new'][1]found
+elementBy.name: group_name
+19:20:29.821 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:29.915 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:29.954 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_header
+19:20:30.004 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:30.079 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:30.123 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_footer
+19:20:30.176 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:30.255 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:30.306 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.xpath: //*[@value='Enter information']
+19:20:30.359 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@value='Enter information']found
+elementBy.linkText: group page
+19:20:30.532 [Test worker] INFO  com.tran16.tests.TestBase - By.linkText: group pagefound
+elementBy.name: selected[]
+19:20:32.697 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //h1[contains(text(),'Groups')]
+19:20:32.723 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //h1[contains(text(),'Groups')]found
+elementBy.name: selected[]
+19:20:32.737 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //*[@name='new'][1]
+19:20:32.750 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@name='new'][1]found
+elementBy.name: group_name
+19:20:32.908 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:32.990 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:33.029 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_header
+19:20:33.224 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:33.303 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:33.341 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_footer
+19:20:33.446 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:33.524 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:33.569 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.xpath: //*[@value='Enter information']
+19:20:33.665 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@value='Enter information']found
+elementBy.linkText: group page
+19:20:33.842 [Test worker] INFO  com.tran16.tests.TestBase - By.linkText: group pagefound
+elementBy.name: selected[]
+19:20:36.003 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -4,6 +4,10 @@ import com.tran16.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -71,12 +75,13 @@ public class ContactHelper extends HelperBase {
 
     }
 
-   /* public void isOnContactsPage() {
-        if (!isContactPresent(By.id("maintable"))) {
-            click(By.xpath("//a[@href='./'"));
+    public void isOnContactPage() {
+        if (!isElementPresent(By.xpath("//table[@id='maintable']")))
+        {
+            click(By.xpath("//a[contains(text(),'home')]"));
         }
     }
-*/
+
     public void selectContactByIndex(int ind) {
         wd.findElements(By.name("selected[]")).get(ind).click();
     }
@@ -90,6 +95,18 @@ public class ContactHelper extends HelperBase {
     }
 
 
+    public List<ContactData> getContactsList() {
+        List<ContactData> contacts = new ArrayList<>();
 
-
+        List<WebElement> rows = wd.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            int id = Integer.parseInt(cells.get(0).findElement(By.name("selected[]")).getAttribute("value"));
+            String lastName = cells.get(1).getText();
+            String firstName = cells.get(2).getText();
+            contacts.add(new ContactData().withId(id).withLastname(lastName).withFirstname(firstName));
+        }
+        return  contacts;
+    }
 }
+

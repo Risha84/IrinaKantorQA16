@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:48" hostname="DESKTOP-KFEGBU6" time="2.442">
+<testsuite name="com.tran16.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-25T16:21:04" hostname="DESKTOP-KFEGBU6" time="2.245">
   <properties/>
-  <testcase name="testContactModification" classname="com.tran16.tests.ContactModificationTest" time="2.442"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testContactModification" classname="com.tran16.tests.ContactModificationTest" time="2.245"/>
+  <system-out><![CDATA[19:21:04.943 [Test worker] INFO  com.tran16.tests.TestBase - Start test testContactModification
+elementBy.name: selected[]
+19:21:04.971 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.name: selected[]
+19:21:04.999 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.name: selected[]
+19:21:05.011 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //*[@alt='Edit'][1]
+19:21:05.130 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@alt='Edit'][1]found
+elementBy.name: firstname
+19:21:05.349 [Test worker] INFO  com.tran16.tests.TestBase - By.name: firstnamefound
+elementBy.name: firstname
+19:21:05.473 [Test worker] INFO  com.tran16.tests.TestBase - By.name: firstnamefound
+elementBy.name: firstname
+19:21:05.515 [Test worker] INFO  com.tran16.tests.TestBase - By.name: firstnamefound
+elementBy.name: lastname
+19:21:05.598 [Test worker] INFO  com.tran16.tests.TestBase - By.name: lastnamefound
+elementBy.name: lastname
+19:21:05.673 [Test worker] INFO  com.tran16.tests.TestBase - By.name: lastnamefound
+elementBy.name: lastname
+19:21:05.715 [Test worker] INFO  com.tran16.tests.TestBase - By.name: lastnamefound
+elementBy.name: address
+19:21:05.815 [Test worker] INFO  com.tran16.tests.TestBase - By.name: addressfound
+elementBy.name: address
+19:21:05.888 [Test worker] INFO  com.tran16.tests.TestBase - By.name: addressfound
+elementBy.name: address
+19:21:05.928 [Test worker] INFO  com.tran16.tests.TestBase - By.name: addressfound
+elementBy.name: nickname
+19:21:06.008 [Test worker] INFO  com.tran16.tests.TestBase - By.name: nicknamefound
+elementBy.name: nickname
+19:21:06.083 [Test worker] INFO  com.tran16.tests.TestBase - By.name: nicknamefound
+elementBy.name: nickname
+19:21:06.122 [Test worker] INFO  com.tran16.tests.TestBase - By.name: nicknamefound
+elementBy.name: company
+19:21:06.249 [Test worker] INFO  com.tran16.tests.TestBase - By.name: companyfound
+elementBy.name: company
+19:21:06.335 [Test worker] INFO  com.tran16.tests.TestBase - By.name: companyfound
+elementBy.name: company
+19:21:06.375 [Test worker] INFO  com.tran16.tests.TestBase - By.name: companyfound
+elementBy.name: email
+19:21:06.467 [Test worker] INFO  com.tran16.tests.TestBase - By.name: emailfound
+elementBy.name: email
+19:21:06.549 [Test worker] INFO  com.tran16.tests.TestBase - By.name: emailfound
+elementBy.name: email
+19:21:06.588 [Test worker] INFO  com.tran16.tests.TestBase - By.name: emailfound
+elementBy.name: update
+19:21:06.782 [Test worker] INFO  com.tran16.tests.TestBase - By.name: updatefound
+elementBy.linkText: home
+19:21:06.935 [Test worker] INFO  com.tran16.tests.TestBase - By.linkText: homefound
+elementBy.name: selected[]
+19:21:07.187 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

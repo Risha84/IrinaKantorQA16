@@ -21,19 +21,23 @@ public class GroupModificationTest extends TestBase {
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
 
-        GroupData groupData = new GroupData()
+        GroupData group = new GroupData()
+                .withId(groupsListBefore.get(0).getId())
                 .withName("modifiedTestGroupName1")
                 .withHeader("modifiedTestGroupHeader1")
                 .withFooter("modifiedTestGroupFooter1");
-        app.getGroupHelper().fillGroupsForm(groupData, groupData.getFooter());
+        app.getGroupHelper().fillGroupsForm(group);
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToTheGroupsPage();
-        List<GroupData> groupsListAfter = app.getGroupHelper().getGroupsList();
+        List<GroupData> groupsListAfter
+                = app.getGroupHelper().getGroupsList();
         groupsListBefore.remove(0);
-        groupsListBefore.add(groupData);
+        groupsListBefore.add(group);
+        //groupsListBefore.sort((o1, o2) -> 0);
         Assert.assertEquals(groupsListAfter.size(),groupsListBefore.size());
-        Assert.assertEquals(new HashSet<Object>(groupsListAfter),
-                new HashSet<Object>(groupsListBefore));
+        Assert.assertEquals(groupsListAfter,groupsListBefore);
+       /* Assert.assertEquals(new HashSet<Object>(groupsListAfter),
+                new HashSet<Object>(groupsListBefore));*/
 
        // int after = app.getGroupHelper().getGroupsCount();
        // Assert.assertEquals(after, before);

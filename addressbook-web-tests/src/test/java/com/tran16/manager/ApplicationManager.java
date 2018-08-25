@@ -1,11 +1,13 @@
 package com.tran16.manager;
 
+import com.tran16.tests.MyListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,8 +15,8 @@ public class ApplicationManager {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     ContactHelper contactHelper;
-    WebDriver wd;
-   String browser;
+    private EventFiringWebDriver wd;
+    private String browser;
 
     public ApplicationManager(String browser) {
 
@@ -22,13 +24,14 @@ public class ApplicationManager {
     }
 
     public void start() {
-        if(browser.equals(BrowserType.CHROME)){
-            wd = new ChromeDriver();
-        }else if(browser.equals(BrowserType.FIREFOX)){
-            wd= new FirefoxDriver();
-        }else if (browser.equals(BrowserType.EDGE)){
-            wd = new EdgeDriver();
+        if (browser.equals(BrowserType.CHROME)) {
+            wd = new EventFiringWebDriver(new ChromeDriver());
+        } else if (browser.equals(BrowserType.FIREFOX)) {
+            wd = new EventFiringWebDriver(new FirefoxDriver());
+        } else if (browser.equals(BrowserType.EDGE)) {
+            wd = new EventFiringWebDriver(new EdgeDriver());
         }
+        wd.register(new MyListener());
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sessionHelper = new SessionHelper(wd);
         sessionHelper.openSite("http://localhost/addressbook/");

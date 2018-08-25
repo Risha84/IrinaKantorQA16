@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:50" hostname="DESKTOP-KFEGBU6" time="3.598">
+<testsuite name="com.tran16.tests.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-25T16:21:07" hostname="DESKTOP-KFEGBU6" time="3.546">
   <properties/>
-  <testcase name="contactDeletionTest" classname="com.tran16.tests.ContactDeletionTest" time="3.598"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="contactDeletionTest" classname="com.tran16.tests.ContactDeletionTest" time="3.546"/>
+  <system-out><![CDATA[19:21:07.192 [Test worker] INFO  com.tran16.tests.TestBase - Start test contactDeletionTest
+elementBy.name: selected[]
+19:21:07.208 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.name: selected[]
+19:21:07.222 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.name: selected[]
+19:21:07.234 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //*[@value='Delete']
+19:21:07.320 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@value='Delete']found
+elementBy.name: selected[]
+19:21:10.736 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,9 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran16.tests.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-19T19:04:31" hostname="DESKTOP-KFEGBU6" time="4.234">
+<testsuite name="com.tran16.tests.GroupModificationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-08-25T16:20:36" hostname="DESKTOP-KFEGBU6" time="4.085">
   <properties/>
-  <testcase name="testGroupModification" classname="com.tran16.tests.GroupModificationTest" time="4.234"/>
-  <system-out><![CDATA[[Groupid=0, name=''}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
-[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
+  <testcase name="testGroupModification" classname="com.tran16.tests.GroupModificationTest" time="4.085">
+    <failure message="java.lang.AssertionError: Lists differ at element [1]: Groupid=0, name='testGroupName1'} != Groupid=0, name='modifiedTestGroupName1'} expected [Groupid=0, name='testGroupName1'}] but found [Groupid=0, name='modifiedTestGroupName1'}]" type="java.lang.AssertionError">java.lang.AssertionError: Lists differ at element [1]: Groupid=0, name='testGroupName1'} != Groupid=0, name='modifiedTestGroupName1'} expected [Groupid=0, name='testGroupName1'}] but found [Groupid=0, name='modifiedTestGroupName1'}]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:831)
+	at org.testng.Assert.assertEquals(Assert.java:796)
+	at com.tran16.tests.GroupModificationTest.testGroupModification(GroupModificationTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:129)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:88)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+  </testcase>
+  <system-out><![CDATA[19:20:36.013 [Test worker] INFO  com.tran16.tests.TestBase - Start test testGroupModification
+elementBy.xpath: //h1[contains(text(),'Groups')]
+19:20:36.036 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //h1[contains(text(),'Groups')]found
+elementBy.name: selected[]
+19:20:36.061 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.cssSelector: span.group
+19:20:36.084 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: span.groupfound
+elementBy.tagName: input
+19:20:36.131 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:36.186 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:36.242 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:36.298 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:36.352 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:36.406 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+[Groupid=0, name=''}, Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
+elementBy.name: selected[]
+19:20:36.426 [Test worker] INFO  com.tran16.tests.TestBase - By.name: selected[]found
+elementBy.xpath: //*[@name='edit'][1]
+19:20:36.509 [Test worker] INFO  com.tran16.tests.TestBase - By.xpath: //*[@name='edit'][1]found
+elementBy.name: group_name
+19:20:36.688 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:36.780 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_name
+19:20:36.819 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_namefound
+elementBy.name: group_header
+19:20:36.943 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:37.021 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_header
+19:20:37.062 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_headerfound
+elementBy.name: group_footer
+19:20:37.187 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:37.262 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: group_footer
+19:20:37.302 [Test worker] INFO  com.tran16.tests.TestBase - By.name: group_footerfound
+elementBy.name: update
+19:20:37.441 [Test worker] INFO  com.tran16.tests.TestBase - By.name: updatefound
+elementBy.linkText: group page
+19:20:37.602 [Test worker] INFO  com.tran16.tests.TestBase - By.linkText: group pagefound
+elementBy.cssSelector: span.group
+19:20:39.752 [Test worker] INFO  com.tran16.tests.TestBase - By.cssSelector: span.groupfound
+elementBy.tagName: input
+19:20:39.810 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:39.868 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:39.925 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:39.981 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:40.034 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+elementBy.tagName: input
+19:20:40.090 [Test worker] INFO  com.tran16.tests.TestBase - By.tagName: inputfound
+[Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='modifiedTestGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName1'}, Groupid=0, name='testGroupName10000000000000000000000000'}]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

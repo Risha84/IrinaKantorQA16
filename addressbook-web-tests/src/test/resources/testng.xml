@@ -3,23 +3,23 @@
 <suite name="Suite1" verbose="1" >
     <test name="Groups" >
         <classes>
-            <class name="com.tran16.tests.GroupCreationTest" />
-            <class name="com.tran16.tests.GroupModificationTest" />
-            <class name="com.tran16.tests.GroupDeletionTest" />
+            <class name="com.GroupCreationTest" />
+            <class name="com.GroupModificationTest" />
+            <class name="com.GroupDeletionTest" />
         </classes>
     </test>
 
     <test name="Contacts" >
         <classes>
-            <class name="com.tran16.tests.ContactCreationTests" />
-            <class name="com.tran16.tests.ContactModificationTest" />
-            <class name="com.tran16.tests.ContactDeletionTest" />
+            <class name="com.ContactCreationTests" />
+            <class name="com.ContactModificationTest" />
+            <class name="com.ContactDeletionTest" />
         </classes>
     </test>
 
     <test name="Login">
         <classes>
-            <class name="com.tran16.tests.TestLogin"/>
+            <class name="com.TestLogin"/>
         </classes>
     </test>
 </suite>
