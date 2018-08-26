@@ -66,6 +66,7 @@ public class GroupData {
     public String getFooter() {
         return footer;
     }
+
     public int getId() { return id; }
 
 }

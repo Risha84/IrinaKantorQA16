@@ -8,8 +8,6 @@ import java.util.HashSet;
 import java.util.List;
 
 public class GroupModificationTest extends TestBase {
-
-
     @Test
     public void testGroupModification() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
@@ -34,10 +32,12 @@ public class GroupModificationTest extends TestBase {
         groupsListBefore.remove(0);
         groupsListBefore.add(group);
         //groupsListBefore.sort((o1, o2) -> 0);
-        Assert.assertEquals(groupsListAfter.size(),groupsListBefore.size());
-        Assert.assertEquals(groupsListAfter,groupsListBefore);
-       /* Assert.assertEquals(new HashSet<Object>(groupsListAfter),
-                new HashSet<Object>(groupsListBefore));*/
+        //Assert.assertEquals(groupsListAfter.size(),groupsListBefore.size());
+      //  Assert.assertEquals(groupsListAfter,groupsListBefore);
+
+        Assert.assertEquals(groupsListAfter.size(), groupsListBefore.size());
+        Assert.assertEquals(new HashSet<Object>(groupsListAfter), new HashSet<Object>(groupsListBefore));
+
 
        // int after = app.getGroupHelper().getGroupsCount();
        // Assert.assertEquals(after, before);
